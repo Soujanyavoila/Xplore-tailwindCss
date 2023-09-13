@@ -1,0 +1,16 @@
+{
+  "name": "xplore-tailwindcss",
+  "version": "1.0.0",
+  "description": "new repository for xplore",
+  "main": "index.js",
+  "scripts": {
+    "dev":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
