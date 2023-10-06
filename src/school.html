@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <!-- Custom CSS -->
+    <style>
+  /* Custom CSS for hover effect */
+.nav:hover{
+    color: #972121;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center " href="#">
+                    <img src="data:image/png;base64,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" class="" style="height: 50px; width: 50px;"> 
+                    <h5 class="text-primary  font-weight-bold">INDIRA NATIONAL SCHOOL</h5>
+                    
+                    </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium " href="http://127.0.0.1:5500/src/school.html">Home</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium  " href="">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium  " href="http://127.0.0.1:5500/src/Acadamics.html">Admissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium  " href="http://127.0.0.1:5500/src/Acadamics.html">Academics</a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium  " href="http://127.0.0.1:5500/src/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../asset/new_admission.c92da1c0.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+         
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../asset/ins-news-banner.567b98df (1).jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+             
+            
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../asset/homepage_banner_image.e32b007e.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Discovering Talents and Building Confidence.</h3>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- Hero Section -->
+    <header class="container mx-auto   text-white text-center py-5 ">
+        <div class="container row row-cols-lg-2 row-cols-md-auto g-3 row-cols-1">
+        <div>
+            <img src="../asset/homepage_welcome_section.fd1b7e26.png" class="w-100 h-100">
+        </div>
+        <div>
+        <h2 class="text-dark text-start" >Welcome to Indira National School</h2>
+        <p class="text-start fs-6" style="color: #373434; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+         Welcome to the Indira National School. We are a part of Shree Chanakya Education Society, which has a strong presence on the education map of Pune. The Trust has been associated with Management education since 1994. The school segment has been operational since 2004.
+        </p>    
+        <p class="text-start fs-6" style="color: #373434; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            Today we are a full fledged CBSE affiliated school with student strength 3821 and a total staff of 267 . We are committed to excellence in education from KG to PG.
+           </p>
+        <p class="fs-6 fw-medium text-dark text-start">School Timings:Afternoon Shift–11:20 am to 4:40 pm</p>
+        </div>   
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="container-fluid mx-auto  px-3 py-5 " style="background-color: #f4f4f5;">
+      <div class="container mx-auto  gap-md-0 gap-y-5 g-3 row row-cols-lg-5 row-cols-md-3 row-cols-1">
+        <div style="position: relative; ">
+            <img src="../asset/pre-primary.5da802a9.png" alt="" class="w-100 h-100">
+            <span class="px-3 py-2 text-light text-center fw-medium fs-6 position-absolute" style="background-color: #d751a8; bottom: 0; left: 25px; right: 25px;">pre primary</span>
+
+        </div>
+        <div style="position: relative; ">
+            <img src="../asset/primary school.png" alt="" class="w-100 h-100">
+            <span class="px-3 py-2 text-light text-center fw-medium fs-6 position-absolute" style="background-color: #695ca3; bottom: 0; left: 25px; right: 25px;">Primary School</span>
+
+        </div>
+        <div style="position: relative; ">
+            <img src="../asset/middleschool.jpg" alt="" class="w-100 h-100">
+            <span class="px-3 py-2 text-light text-center fw-medium fs-6 position-absolute" style="background-color: #d93627; bottom: 0; left: 25px; right: 25px;">Middle School</span>
+
+        </div>
+        <div style="position: relative; ">
+            <img src="../asset/sec-school.60520a12.jpg" alt="" class="w-100 h-100">
+            <span class="px-3 py-2 text-light text-center fw-medium fs-6 position-absolute" style="background-color: #d6c241; bottom: 0; left: 25px; right: 25px;">Secondary School</span>
+
+        </div>
+        <div style="position: relative; ">
+            <img src="../asset/high-sec.11a4fd89.jpg" alt="" class="w-100 h-100">
+            <span class="px-3 py-2 text-light text-center fw-medium fs-6 position-absolute" style="background-color: #5eb266; bottom: 0; left: 15px; right: 15px;">Sr. Secondary School</span>
+
+        </div>
+       <div>
+      
+         
+
+    </section>
+    
+    
+    <section class="container-fluid mx-auto py-md-5  py-4" style="background-color: #fae3f2;">
+        <div class="container mx-auto">
+            <h2 class="text-center fw-semibold">Why Indira National School?</h2>
+            <div class="container mx-auto d-flex flex-lg-row flex-md-row flex-lg-nowrap flex-wrap   flex-column justify-content-center gap-5 py-5 px-lg-5">
+                <div class="col-12 col-md-5  col-lg-3 text-center">
+                    <img src="../asset/acaadamic.png" class="mx-auto" alt="Strong Academic System">
+                    <p class="fst-italic fs-6 fw-medium">Strong Academic System</p>
+                </div>
+                <div class="col-12 col-md-5  col-lg-3 text-center">
+                    <img src="../asset/hands.png" class="mx-auto" alt="Empowering Student Life">
+                    <p class="fst-italic fs-6 fw-medium">Empowering Student Life</p>
+                </div>
+                <div class="col-12 col-md-5  col-lg-3 text-center">
+                    <img src="../asset/modren teaching.png" class="mx-auto" alt="Modern Teaching Methods">
+                    <p class="fst-italic fs-6 fw-medium">Modern Teaching Methods</p>
+                </div>
+                <div class="col-12 col-md-5  col-lg-3 text-center">
+                    <img src="../asset/running.png" class="mx-auto" alt="Wide Range of Activities">
+                    <p class="fst-italic fs-6 fw-medium">Wide Range of Activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="container-fluid mx-auto py-md-5 py-4" >
+<div class="container mx-auto">
+ <h2 class="text-center fw-semibold">Indira National School Highlights</h2>
+<div class="container mx-auto row row-col-lg-3 row-cols-2  justify-content-center gap-5 py-5 ">
+    <div class=" shadow-lg rounded-circle bg-danger text-white p-4 d-flex flex-column justify-content-center align-items-center" style="width:250px; height:250px;">
+        <!-- Content inside the circle -->
+        <p class="display-3 fw-semibold">3821+</p>
+        <h3>Students</h3>
+    </div>
+    <div class="shadow-lg rounded-circle bg-danger text-white p-4 d-flex flex-column justify-content-center align-items-center" style="width:250px; height:250px;">
+        <!-- Content inside the circle -->
+        <p class="display-3 fw-semibold">15+</p>
+        <h3 class="text-center">Years of Experience</h3>
+    </div>
+    <div class="shadow-lg rounded-circle bg-danger text-white p-4 d-flex flex-column justify-content-center align-items-center" style="width:250px; height:250px;">
+        <!-- Content inside the circle -->
+        <p class="display-3 fw-semibold">2300+
+        </p>
+        <h3>Alumni</h3>
+    </div>
+  
+    
+</div>
+</section>
+
+     
+<section class="container-fluid mx-auto py-md-5 py-4" style="background-color: rgb(240, 240, 227);">
+    <div class="container mx-auto px-4 ">
+     <h2 class="text-center fw-semibold">Holistic Educational Approach</h2>
+  <div class="row row-cols-auto justify-content-center flex-wrap py-5 g-2  ">
+    <div class="col-lg-5">
+        <img src="../asset/holistic-education-Dance.2ce1e2c3.png" class="w-100 h-100">
+    </div>
+     <div class="col-lg-7 row row-cols-2 g-2 px-3 ">
+       <div class=""><img src="../asset/music.jpeg " class="w-100 h-100"></div> 
+       <div class=""> <img src="../asset/clubs.png" class="w-100 h-100"></div>
+    
+        <div class=""><img src="../asset/music.jpeg " class="w-100 h-100"></div>
+        <div class=""><img src="../asset/clubs.png" class="w-100 h-100">
+    
+     </div>
+   
+</div>
+  
+
+  
+</div>    
+    </div>
+    </section>
+   
+    <!-- Add more sections as needed -->
+    <section class="container-fluid mx-auto py-md-5 py-3" style="background-color: rgb(234, 221, 234);">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center fw-semibold">What Parents have to say about us</h2>
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container d-flex flex-md-nowrap flex-wrap gap-2 py-3">
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary gap-2 px-2 py-4 ">
+                                <h5>Shrinivas Kulkarni</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Indira has been an inseparable and a substantial part of my ward's growing up journey. With Indira, I have seen her develop.</p>
+                                <img src="../asset/w1.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Shrinivas Kulkarni</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/w2.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Bhavana Tayde</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/w3.png" class="h-50 w-50">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container d-flex gap-2 py-3 flex-md-nowrap flex-wrap">
+                            <div class="bg-light Regular shadow rounded-top d-flex  flex-column align-items-center border border-secondary gap-2 py-4">
+                                <h5>Amit Saini</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Indira has been an inseparable and a substantial part of my ward's growing up journey. With Indira, I have seen her develop.</p>
+                                <img src="../asset/m1.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Kumendra Raheja</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/m2.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Bhavana Tayde</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/w3.png" class="h-50 w-50">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container d-flex gap-2 py-3 flex-md-nowrap flex-wrap ">
+                            <div class="bg-light Regular shadow rounded-top d-flex  flex-column align-items-center border border-secondary gap-2 py-4">
+                                <h5>Amit Saini</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Indira has been an inseparable and a substantial part of my ward's growing up journey. With Indira, I have seen her develop.</p>
+                                <img src="../asset/m1.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Kumendra Raheja</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/m2.png" class="h-50 w-50">
+                            </div>
+                            <div class="bg-light Regular shadow rounded-top d-flex flex-column align-items-center border border-secondary px-2 py-4 gap-2">
+                                <h5>Bhavana Tayde</h5>
+                                <p class="text-center fs-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">I would like to thank INS for providing many different opportunities for my daughter to learn and grow at every step.</p>
+                                <img src="../asset/w3.png" class="h-50 w-50">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto py-4">
+        <h2 class="text-center">Students Life</h2>
+        <div class="container mx-auto row row-cols-1 row-cols-md-3 justify-content-center gap-md-0 gap-3 py-4">
+            <div class="col-md-4">
+                <div class="custom-element position-relative w-100 h-100">
+                    <img src="../asset/parents.png" alt="Parents Engagement" class="w-100 h-100">
+                    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                        <p class="text-light fs-6" style="font-family: serif;">Parents Engagement</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-element position-relative w-100 h-100">
+                    <img src="../asset/leadership.png" alt="Leadership Series" class="w-100 h-100">
+                    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                        <p class="text-light" style="font-family: serif;">Leadership Series</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-element position-relative w-100 h-100">
+                    <img src="../asset/student achievement.png" alt="Student Achievements" class="w-100 h-100">
+                    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                        <p class="text-light" style="font-family: serif;">Student Achievements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="container-fluid mx-auto " style="background-color: #f1f1f1;">
+        <div class="container py-4 px-md-3 px-lg-5 px-3">
+            <div class="row row-cols-lg-10 row-cols-md-2  row-cols-md-8  gap-lg-0 gap-md-0 gap-4">
+                <div class="col-lg-4 col-md- ">
+                    <h6>ABOUT INS</h6>             <p style="font-size: 18px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:medium; font-style: initial;">Welcome to the Indira National School We are a part of Shree Chanakya Education Society, which has a strong presence on the education map of Pune.</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-5">
+                    <h6>SCHOOL LEVEL</h6>
+                <ul class="list-unstyled">
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Home</a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">About</a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Courses</a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Admissions</a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">News</a></li>
+                    </ul>
+                        
+                </div>
+                <div class="col-lg-2 col-md-3  col-5 ">
+                    <h6>Quick Links</h6>
+                  <ul class="list-unstyled">
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Blog
+                           </a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#"> Events
+                           </a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#"> Infrastructure</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-5">
+                    <h6>ADMISSIONS</h6>
+                    <ul class="list-unstyled">
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Admission Process</a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Fees
+                            </a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Admission Form
+                            </a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#">Book a Meeting
+                           </a></li>
+                        <li><a class=" text-decoration-none py-2 " style="color: #000; font-size:medium; font-style: initial;" href="#"> Enquiry Form</a></li>
+                    </ul>
+                        
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h6>Contact Information</h6>
+                   
+                        <strong>Address:</strong><br>
+                        1040 Flexer Avenue
+                        Allentown, PA 18103
+                   
+                    <p><strong>Email:</strong> info@schoolwebsite.com</p>
+                    <p><strong>Phone:</strong> 610-432-0396  |  Fax 610-432-1395</p>
+                </div>
+            </div>
+          
+        </div>
+        </footer>
+        <footer>
+        <div class="container-fluid  py-2 badge-info">
+            <div class="  mx-auto text-center d-flex  gap-1 flex-wrap  gap-lg-2 justify-content-center">
+                <p class="col-md-8 col-lg-4 ">&copy; 
+                    © 2022 . Indira National School, Pune..</p>
+                    <div class="col-lg-2  col-md-4 col-lg-2 col-5  text-center ">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="px-1 bi bi-facebook text-white" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="px-1 bi bi-twitter text-white" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="px-1 bi bi-instagram text-white" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg></a>
+                    </div>
+                    <a class="text-decoration-none text-light col-5  col-lg-2  col-md-4 mx-2" href="">PRIVACY POLICY    </a>
+                    <a class="text-decoration-none text-light col-5  col-lg-2  col-md-4" href="">PRIVACY POLICY    </a>
+           
+                </div>
+                
+        </div>
+   </footer>
+
+    <!-- Add Bootstrap and jQuery scripts at the end of the body for faster page loading -->
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
