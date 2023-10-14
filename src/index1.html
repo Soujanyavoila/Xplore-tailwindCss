@@ -4,94 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>voilaco|index</title>
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="container-fluid  bg-sky-800 lg:px-20 py-2 ">
 
-<nav class="container mx-auto l:px-2 ">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" class="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Voilacode</span>
-          </a>
-          <button id="mobileMenuButton" data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm bg-white rounded-lg md:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+  <nav class="bg-sky-800 border-gray-200 lg:px-24 dark:bg-gray-900 dark:border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center">
+          
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Voilacode</span>
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 bg-white text-blue-500 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-          </button>
-        
-          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0">
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 hover:text-blue-300  rounded   md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">Home</a>
-              </li>
-              
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 md:hover:bg-transparent md:border-0 hover:text-blue-300 md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150">About</a>
-              </li>
-
-              <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white  font-medium rounded-lg text-base text-center inline-flex items-center hover:text-blue-300 transform scale-100 hover:scale-105 transition-transform duration-150" type="button">Services
-            </button>
-            
-            <!-- Dropdown menu -->
-            <div id="dropdownHover" class="z-10 py-2 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 hover:text-blue-300 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 hover:text-blue-300 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">About</a>
+          </li>
+          
+          <li>
+            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-base text-center inline-flex items-center hover:text-blue-300 transform scale-100 hover:scale-105 transition-transform duration-150 ml-2" type="button">Services</button>
+            <div id="dropdownHover" class="z-10 absolute py-2 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Web Development</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile Development</a>
-                  </li>
-                 
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Web Development</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile Development</a>
+                    </li>
                 </ul>
             </div>
-            
-            <li>
-              <button id="newDropdownHoverButton" data-dropdown-toggle="newDropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-base text-center inline-flex items-center hover:text-blue-300 transform scale-100 hover:scale-105 transition-transform duration-150" type="button">Products</button>
-            
-              <!-- Dropdown menu -->
-              <div id="newDropdownHover" class="py-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="newDropdownDefaultButton">
+        </li>
+        <li>
+          <button id="newDropdownHoverButton" data-dropdown-toggle="newDropdownHover" data-dropdown-trigger="hover" class="text-white font-medium rounded-lg text-base text-center hover:text-blue-300 transform scale-100 hover:scale-105 transition-transform duration-150 ml-2 m " type="button">Products</button>
+          <div id="newDropdownHover" class="z-10 absolute py-2 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="newDropdownDefaultButton">
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Community App</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Community App</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Recruitment App</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Recruitment App</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Learning App</a>
+                      <a href="#" class="block px-4 py-2 hover-bg-gray-100 dark:hover-bg-gray-600 dark:hover-text-white">Learning App</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover-bg-gray-600 dark:hover-text-white">Website App</a>
+                      <a href="#" class="block px-4 py-2 hover-bg-gray-100 dark:hover-bg-gray-600 dark:hover-text-white">Website App</a>
                   </li>
-                </ul>
-              </div>
-            </li>
-            
-            <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 hover:text-blue-300 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150 " aria-current="page">Contact</a>
-              </li>
-              
-             
-            </ul>
+              </ul>
           </div>
-        </div>
-      </nav>
-
-
-</header>
+      </li>
+         
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-slate-100 hover:text-blue-300 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
 <!----hero-->
 <section class="container-fluid mx-auto bg-sky-100 lg:py-16 lg:px-20 p-5 md:py-5 md:px-8 gap-6">
  <div class="container  mx-auto max-w-screen-xl  ">
 <div class="grid md:grid-cols-12 grid-cols-1 lg:px-8 gap-10 items-center">
   <div class="col-span-7">
-    <h1 class="md:text-4xl lg:text-6xl text-3xl  font-semibold md:leading-relaxed text-red-800 animate-pulse">We Help You Build and Grow Business</h1>   
-    <p class="my-3 text-xl text-slate-800">We believe in teamwork and client satisfaction. Ready to start your digital journey? Contact us to bring your vision to life.</p>
-   <button type="button" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-base px-5 py-2.5 text-center my-4 mr-2 mb-2 transform scale-100 hover:scale-105 transition-transform duration-150">Contact us</button>
+    <h1 class="md:text-4xl lg:text-5xl text-3xl  font-bold w-full text-red-800 animate-pulse">We Help You Build and Grow Business</h1>   
+    <p class=" text-xl text-slate-800 mt-5 leading-relaxed">We believe in teamwork and client satisfaction. Ready to start your digital journey? Contact us to bring your vision to life.</p>
+   <button type="button" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-base px-5 py-2.5 text-center mt-10 mr-2 mb-2 transform scale-100 hover:scale-105 transition-transform duration-150">Contact us</button>
 
 </div>    
 
@@ -102,85 +90,82 @@
  </div>   
 
 </section>
-<section class="container-fluid mx-auto bg-gray-100 lg:py-10 lg:px-20 p-5 md:py-5 md:px-8">
-  <h1 class="text-3xl font-bold text-orange-900 text-center font-serif">Our Services</h1>
-  <p class="text-center text-lg italic font-medium my-3">We provide the best services</p>
-  <div class="container mx-auto max-w-screen-xl grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 py-8 lg:px-10">
 
-    <!-- Service 1 -->
-    
-      <div class="bg-white hover:border-2 hover:border-blue-300 cursor-pointer py-4 px-5 flex flex-col items-center rounded-lg scale-100 md:mr-5 duration-300 ease-in-out transform hover:-translate-y-2">
-        <div class="flex gap-1">
-          <img src="../asset/web-development4.png" class="h-12 w-16" alt="Web Development">
-          <div class="text-2xl font-semibold text-sky-900">Web Development</div>
-        </div>
-        <p class="font-sans leading-relaxed mt-2">
-          We offer comprehensive web development services to create user-friendly and responsive websites. Our expert developers use the latest technologies to build modern and functional web applications that cater to your specific needs.
-        </p>
-      </div>
-
-
-    <!-- Service 2 -->
-    
-      <div class="bg-white hover:border-2 hover:border-blue-300 cursor-pointer py-4 px-5 flex flex-col items-center rounded-lg scale-100 md:mr-5 duration-300 ease-in-out transform hover:-translate-y-2">
-        <div class="flex gap-1">
-          <img src="../asset/mobile-app-development.png" class="h-12 w-16" alt="Mobile Development">
-          <div class="text-2xl font-semibold text-sky-900">Mobile Development</div>
-        </div>
-        <p class="font-sans leading-relaxed mt-2">
-          Our mobile development services encompass the creation of innovative and engaging mobile apps for various platforms. We focus on delivering seamless user experiences and cutting-edge features to ensure your app stands out in the competitive market.
-        </p>
-      </div>
+<section class="container-fluid mx-auto bg-gray-100  lg:py-10 lg:px-20 p-5  md:py-5 md:px-8  ">
+<h1 class="text-3xl font-bold text-orange-900 text-center font-serif">Our Services</h1>
+<p class="text-center text-base italic font-normal text-gray-500 my-2">We provide the best services</p>
+<div class= "container mx-auto max-w-screen-xl grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 py-8 lg:px-10 ">
+<div class="bg-white hover:border-2 hover:border-blue-300 cursor-pointer px-4 py-5 flex flex-col items-center  rounded-lg  scale-100  md:mr-  duration-300 ease-in-out transform hover:-translate-y-2">
+<div class="flex gap-1">
+  <img src="../asset/web-development4.png" class="h-12 w-16 ">
+  <div class="text-2xl font-semibold text-sky-900">Web Development</div>
+ 
+</div>
+<p class="font-sans leading-relaxed mt-2">We offer comprehensive web development services to create user-friendly and responsive websites. Our expert developers use the latest technologies to build modern and functional web applications that cater to your specific needs.</p>
+</div>
+<!--2-->
+<div class="bg-white hover:border-2 hover:border-blue-300 cursor-pointer px-4 py-5 flex flex-col items-center  rounded-lg  scale-100  md:mr-5  duration-300 ease-in-out transform hover:-translate-y-2">
+  
+  <div class="flex gap-1">
+    <img src="../asset/mobile-app-development.png" alt="mobile img" class="h-12 w-16">
+    <div class="text-2xl font-semibold text-sky-900">Mobile Development</div>
     </div>
+    <p class="font-sans leading-relaxed mt-2">Our mobile development services encompass the creation of innovative and engaging mobile apps for various platforms. We focus on delivering seamless user experiences and cutting-edge features to ensure your app stands out in the competitive market.
+
+    </p>
+  </div>
+</div>
+
+
+
 
 </section>
-
 <section class="container-fluid mx-auto bg-blue-200 lg:py-10 lg:px-20 p-5  md:py-5 md:px-8 ">
   <h1 class="text-4xl font-bold text-yellow-800 text-center font-serif">Our Products</h1>
   
-  <p class="text-center text-lg italic font-medium my-3">Speed up your work flow with our Products</p>
+  <p class="text-center text-base italic font-normal text-slate-500 my-3">Speed up your work flow with our Products</p>
  <div class="container mx-auto lg:px-10  max-w-screen-xl">
-  <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:py-10 md:py-8 gap-6 py-4">
-  <div class="flex flex-col  items-center md:items-start bg-white hover:bg-teal-400 hover:text-white border border-teal-200 gap-2 px-3 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
-    <img src="../asset/community1.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-5 " >
-   <div class="bg-gradient-to-r w-40 from-teal-800 font-medium to-teal-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-200 ease-in-out transform  hover:translate-x-4 relative bottom-5 rounded-md  ">Community App</div> 
+  <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:pt-16 md:py-10  gap-6 py-4">
+  <div class="flex flex-col  items-center md:items-start bg-white hover:bg-teal-400 hover:text-white border border-teal-200 gap-2 px-4 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
+    <img src="../asset/community1.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-8 " >
+   <div class="bg-gradient-to-r w-40 from-teal-800 font-medium to-teal-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-200 ease-in-out transform  hover:translate-x-4 relative bottom-8 rounded-md  ">Community App</div> 
    <p class="relative bottom-5">Connect and collaborate with your community using our innovative Community App. Share ideas, events, and more!</p>
-   <button type="button" class=" bg-gradient-to-r from-teal-600 via-teal-700 to-teal-500 w-36  font-medium rounded-full text-base text-white px-5 py-2 text-center mr-2 mb-5  transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white ">view details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mt-1.5 font-semibold text-white">
+   <button type="button" class=" bg-gradient-to-r from-teal-600 via-teal-700 to-teal-500 w-36  font-medium rounded-full text-base text-white px-5 py-2 text-center mr-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white ">view details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mt-1.5 font-semibold text-white">
     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
   </svg>
    </button>
   </div>  
   <!---2-->
-  <div class="flex flex-col  items-center md:items-start bg-white hover:bg-yellow-400 hover:text-white border border-yellow-200 gap-2 px-3 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
-    <img src="../asset/recruitment.jpg" class="h-16 w-16 rounded-full bg-white self-center relative bottom-5 " >
-   <div class="bg-gradient-to-r w-40 from-yellow-600 font-medium to-yellow-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-5 rounded-md  ">Recruitment App</div> 
+  <div class="flex flex-col  items-center md:items-start bg-white hover:bg-yellow-400 hover:text-white border border-yellow-200 gap-2 px-4 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
+    <img src="../asset/recruitment.jpg" class="h-16 w-16 rounded-full bg-white self-center relative bottom-8 " >
+   <div class="bg-gradient-to-r w-40 from-yellow-600 font-medium to-yellow-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-8 rounded-md  ">Recruitment App</div> 
    <p class="relative bottom-5">Streamline your recruitment process with our advanced Recruitment App. Find the best candidates efficiently</p>
-   <button type="button" class="text-white bg-yellow-600 w-36   font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-3  transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white">View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
+   <button type="button" class="text-white bg-yellow-600 w-36   font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white">View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
   </svg>
   </button>
   </div>  
 <!--3-->
 
-<div class="flex flex-col  items-center md:items-start bg-white hover:bg-green-300 hover:text-white border border-green-200 gap-2 px-3 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
-  <img src="../asset/web app1.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-5 " >
- <div class="bg-gradient-to-r w-36 from-green-600 font-medium to-green-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-5 rounded-md  ">Web App</div> 
+<div class="flex flex-col  items-center md:items-start bg-white hover:bg-green-300 hover:text-white border border-green-200 gap-2 px-4 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
+  <img src="../asset/web app1.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-8 " >
+ <div class="bg-gradient-to-r w-36 from-green-600 font-medium to-green-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-8 rounded-md  ">Web App</div> 
  <p class="relative bottom-5">Build your online presence with our versatile Web App solutions. Create stunning websites tailored to your needs.
 
  </p>
- <button type="button" class="text-white bg-green-600 w-36  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-3  transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white"> View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
+ <button type="button" class="text-white bg-green-600 w-36  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white"> View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 </svg></button>
 </div>  
 <!--4-->
 
-<div class="flex flex-col bg-white items-center md:items-start hover:bg-purple-400 hover:text-white border border-purple-200 gap-2 px-3 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
-  <img src="../asset/book.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-5 " >
- <div class="bg-gradient-to-r w-32 from-purple-600 font-medium to-purple-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-5 rounded-md  ">Learning App</div> 
+<div class="flex flex-col bg-white items-center md:items-start hover:bg-purple-400 hover:text-white border border-purple-200 gap-2 px-4 shadow rounded-xl hover:shadow-2xl cursor-pointer duration-500 ease-in">
+  <img src="../asset/book.png" class="h-16 w-16 rounded-full bg-white self-center relative bottom-8 " >
+ <div class="bg-gradient-to-r w-36 from-purple-600 font-medium to-purple-100  py-1 px-2 border border-white  text-white text-base font-sans   duration-500 ease-in-out transform  hover:translate-x-4 relative bottom-8 rounded-md  ">Learning App</div> 
  <p class="relative bottom-5">Build your online presence with our versatile Web App solutions. Create stunning websites tailored to your needs.
 
  </p>
- <button type="button" class="text-white bg-purple-600 w-36   font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-3  transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white"> View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
+ <button type="button" class="text-white bg-purple-600 w-36   font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 flex border border-white"> View Details <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white mt-0.5">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 </svg></button>
 </div>
@@ -190,18 +175,18 @@
 
 </section>
 
-<section class="container-fluid mx-auto  lg:py-10 lg:px-20 p-5 bg-slate-50  md:py-5 md:px-8 ">
+<section class="container-fluid mx-auto  lg:py-16 lg:px-20 p-5 bg-slate-50  md:py-5 md:px-8 ">
  <div class="container mx-auto max-w-screen-xl lg:px-10">
   <h1 class="text-4xl font-bold text-teal-700 text-center font-serif">Why Choose VoilaCode Services<h1>
     <div class="inline-flex items-center  justify-center w-full">
-      <hr class="w-64 h-1 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700">
+      <hr class="w-72 h-0.5 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700">
     <div class="absolute px-4 -translate-x-1/2  left-1/2 ">
       <svg class="w-4 h-4 text-yellow-700 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
   <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
 </svg>
 </div>
 </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
       <!-- Expertise -->
       <div class="bg-white p-6 rounded-lg shadow-md duration-200 ease-in-out transform  hover:translate-x-4  border border-gray-200">
           <h3 class="text-xl font-semibold mb-2">💡 Expertise</h3>
@@ -247,14 +232,14 @@
   
 </section>
 
-<section class="container-fluid mx-auto  lg:py-10 lg:px-20 p-5 bg-sky-100  md:py-5 md:px-10 ">
+<section class="container-fluid mx-auto   lg:px-20 p-5   md:py-5 md:px-10 ">
   <div class="container mx-auto max-w-screen-xl lg:px-10 py-3">
    <div class="grid md:grid-cols-2 grid-cols-1 items-center justify-center">
     <div class="">
-<h1 class="text-4xl md:text-3xl mb-3 lg:leading-relaxed leading-normal font-sans font-semibold w-96 ">Looking for a Customized Solution?</h1>
+<h1 class="text-4xl md:text-3xl mb-3 w-96 font-serif font-medium text-sky-500 ">Looking for a Customized Solution?</h1>
 <div class="flex flex-col">
-  <p class="text-slate-700 font-sans">Our team is here to help you find the perfect solution tailored to your specific needs. Contact us to get started.</p>    
-<button type="button" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-full text-base px-5 py-2.5 text-center mr-2 mb-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 self-center">Talk to Us</button>
+  <p class="text-slate-500 font-sans">Our team is here to help you find the perfect solution tailored to your specific needs. Contact us to get started.</p>    
+<button type="button" class="text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-full text-base px-5 py-2.5 text-center mr-2 mb-2 my-5 transform scale-100 hover:scale-105 transition-transform duration-150 self-center">Talk to Us</button>
 </div>
 
 </div>
