@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Navbar */
+        .navbar-nav .nav-link {
+            color: rgb(58, 58, 179);
+            font-weight: 400;
+            font-size: medium;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgb(230, 233, 239);
+            border-radius: 10px;
+        }
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="shadow-lg">
+        <nav class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="../asset/workindia.webp" class="w-75"/>
+            </a>
+            <!-- Navbar toggler button and links -->
+            <!-- Adjusted navbar links -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#jobs">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#employers">Employers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#candidates">Candidates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded text-light" style="background-color:rgb(168, 94, 221);" href="#login">Login</a>
+                    </li>
+                </ul>
+                <!-- Search form -->
+                <form class="d-flex mx-5">
+                    <input class="form-control me-2" type="search" placeholder="Find a job" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" style="background-image: linear-gradient(to top,#b0d4f4,  #e7eef6);" class=" text-center py-5">
+        <div class="container">
+            <h1 class="fw-medium">India’s Largest Job Portal</h1>
+            <p class="fs-5 fw-normal">WorkIndia helps you hire staff in 2 days</p>
+            <img src="../asset/landing_hero.webp" width="500" height="300"/>
+            <div class="d-flex justify-content-center gap-4">
+                <button type="button" class="btn btn-outline-primary w-25">Hire Now</button>
+                <button type="button" class="btn btn-outline-primary w-25">Get Job</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Feature Companies -->
+    <section class="container py-5">
+        <p class="text-center fs-2">Top Feature Companies</p>
+
+        <div class="py-2">
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/congizent.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/tata.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/infosys.webp" width="150" />
+          
+      
+        </div>
+        <div class="py-2">
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/congizent.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/tata.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/wipro.webp" width="150" />
+          <img class="px-3" src="../asset/infosys.webp" width="150" />
+          
+      
+        </div>
+    </section>
+
+    <!-- Premium Jobs Section -->
+    <section id="jobs" class=" mt-5 bg-danger-subtle py-5 mx-auto">
+        <div class="container">
+            <div class=" row">
+                <h2 class="mb-4 text-center">Premium Jobs</h2>
+                <div class="col  mb-4">
+                    <div class="card job-card border border-danger-subtle">
+                        <div class="card-body">
+                            <h5 class="card-title">Software Engineer</h5>
+                            <p class="card-text">Company ABC</p>
+                            <p class="card-text">Location: New York, NY</p>
+                          <button type="button" class="btn btn-outline-secondary">Apply now</button>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="col  mb-4">
+                    <div class="card job-card border border-danger-subtle">
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing Manager</h5>
+                            <p class="card-text">Company XYZ</p>
+                            <p class="card-text">Location: Los Angeles, CA</p>
+                          <button type="button" class="btn btn-outline-secondary">Apply now</button>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="col  mb-4">
+                    <div class="card job-card border border-danger-subtle">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analyst</h5>
+                            <p class="card-text">Company DEF</p>
+                            <p class="card-text">Location: Chicago, IL</p>
+                          <button type="button" class="btn btn-outline-secondary">Apply now</button>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="col  mb-4">
+                    <div class="card job-card border border-danger-subtle">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analyst</h5>
+                            <p class="card-text">Company DEF</p>
+                            <p class="card-text">Location: Chicago, IL</p>
+                          <button type="button" class="btn btn-outline-secondary">Apply now</button>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>    </section>
+
+    <!-- Jobs For You Section -->
+    <section id="jobs" style="background-color:#dadcee;" class=" mt-5 py-5 mx-auto">
+        <!-- Your existing jobs for you section code -->
+        <div class="container">
+            <h3 class="text-center">Jobs For You</h3>
+            <div class="row py-3">
+                <div class="col mx-auto mb-4">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-primary-subtle" src="../asset/intership.svg" />
+                            <p>Internship</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-secondary-subtle" src="../asset/intership.svg" />
+                            <p>Internship</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-warning-subtle" src="../asset/it_software.svg" />
+                            <p>IT Software</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-danger-subtle" src="../asset/it_software.svg" />
+                            <p>IT Software</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-success-subtle" src="../asset/it_software.svg" />
+                            <p>IT Software</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4 ">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-info-subtle" src="../asset/congi.svg" />
+                            <p>Consulting</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col mx-auto mb-4 d-felx align-items-center">
+                    <div class="card job-card h-100 border border-secondary-subtle border-2 shadow">
+                        <div class="card-body text-center">
+                            <img class="border p-3 mb-2 rounded bg-danger-subtle" src="../asset/work_from_home.svg" />
+                            <p>Work From Home</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="container mt-5">
+        <!-- Your existing statistics section code -->
+        <div class="row py-5">
+            <div class="col-3 mx-auto mb-4">
+                <div class="card job-card bg-primary-subtle ">
+                    <div class="card-body text-center">
+                        <img class="" src="../asset/candidate.svg"/>
+                        <h1>34L+</h1>
+                        <p>IT Software
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3 mx-auto mb-4">
+                <div class="card job-card bg-primary-subtle ">
+                    <div class="card-body text-center">
+                        <img class="" src="../asset/phone.svg"/>
+                        <h1>2Cr+</h1>
+                        <p>Qualified Candidates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mx-auto mb-4">
+                <div class="card job-card bg-primary-subtle ">
+                    <div class="card-body text-center">
+                        <img class="" src="../asset/india.svg"/>
+                      <h1>2Cr+</h1>
+                      <p>Qualified Candidates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Employers Section -->
+    <section id="employers" class=" mt-5 bg-light p-4">
+        <!-- Your existing employers section code -->
+        <h2 class="mb-4 text-center">Employers</h2>
+    <div class="container py-4">
+        <div class="row ">
+            <div class="col-md-6">
+                <div class="card border shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Posting Jobs</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sodales est. Proin ac nibh vitae nunc pharetra ultricies.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Finding Candidates</h5>
+                        <p class="card-text">Nulla facilisi. Aenean viverra nisl sed maximus sollicitudin. Vivamus ut arcu eget libero fermentum malesuada.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Candidates Section -->
+    <section id="candidates" class=" mt-5 bg-primary-subtle p-4">
+        <!-- Your existing candidates section code -->
+        <h2 class="mb-4 text-center">Candidates</h2>
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Finding Jobs</h5>
+                        <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce gravida augue l tristique.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Applying Effectively</h5>
+                        <p class="card-text">Vivamus non elit id nisi tincidunt lacinia sit amet vel libero. Donec posuere ex id urna cursus, sed ultrices mi malesuada.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="container mt-5">
+        <!-- Your existing login section code -->
+        
+   <div class="row">
+    <div class="col-8">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        How do I create an account?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        To create an account, click on the "Sign Up" button at the top right corner of the page and follow the instructions to complete the registration process.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        How can I apply for a job?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        To apply for a job, first, log in to your account. Then, navigate to the job listing page, select the job you are interested in, and click on the "Apply Now" button. Follow the instructions to submit your application.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Can I edit my application after submission?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        No, once your application is submitted, you cannot edit it. Make sure to review your application carefully before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        How do I reset my password?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        To reset your password, click on the "Forgot Password" link on the login page and follow the instructions sent to your registered email address.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-4 login-box bg-primary-subtle p-4 rounded border shadow h-50">
+        <h2 class="mb-4">Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group mt-4">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn mt-4 btn-primary">Submit</button>
+        </form>
+    </div>
+   </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container py-3">
+            <p class="text-center">&copy; 2024 JobPortal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
